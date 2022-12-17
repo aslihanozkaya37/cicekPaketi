@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6AWyjCcRCVHqyXm+mJJcBjFVtSbW4X8zLimKNS565w8rGDyK9Qwx2q1eaD2X2JPDG2qXJJsXrvfL61lu1j/JLg==",
+  "success": true,
+  "projectFilePath": "C:\\githubProject\\cicekPaketi\\DataAccessLayer\\DataAccessLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aslih\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\aslih\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
