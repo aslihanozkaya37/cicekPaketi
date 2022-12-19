@@ -1,3 +1,5 @@
+using BusinessLayer.IServices;
+using BusinessLayer.Services;
 using DataAccessLayer.IRepository;
 using DataAccessLayer.Repository;
 using DataLayer.Models;
@@ -12,6 +14,9 @@ builder.Services.AddControllersWithViews();
 
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IUserServices, UserServices>();
+builder.Services.AddScoped<IProductServices, ProductServices>();
+builder.Services.AddScoped<IUserServices, UserServices>();
 
 var app = builder.Build();
 

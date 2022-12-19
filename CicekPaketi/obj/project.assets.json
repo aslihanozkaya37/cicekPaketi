@@ -632,6 +632,16 @@
           }
         }
       },
+      "BusinessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BusinessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLayer.dll": {}
+        }
+      },
       "DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1878,6 +1888,11 @@
         "version.txt"
       ]
     },
+    "BusinessLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLayer/BusinessLayer.csproj",
+      "msbuildProject": "../BusinessLayer/BusinessLayer.csproj"
+    },
     "DataAccessLayer/1.0.0": {
       "type": "project",
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
@@ -1891,6 +1906,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BusinessLayer >= 1.0.0",
       "DataAccessLayer >= 1.0.0",
       "DataLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
@@ -1924,6 +1940,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\githubProject\\cicekPaketi\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\githubProject\\cicekPaketi\\BusinessLayer\\BusinessLayer.csproj"
+            },
             "C:\\githubProject\\cicekPaketi\\DataAccessLayer\\DataAccessLayer.csproj": {
               "projectPath": "C:\\githubProject\\cicekPaketi\\DataAccessLayer\\DataAccessLayer.csproj"
             },
