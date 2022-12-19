@@ -52,10 +52,6 @@ namespace DataAccessLayer.Repository
             dbSet.RemoveRange(entityList);
         }
 
-        public bool SaveChanges()
-        {
-           return 0<cicekPaketiDbContext.SaveChanges();
-        }
 
         public void Update(T entity)
         {

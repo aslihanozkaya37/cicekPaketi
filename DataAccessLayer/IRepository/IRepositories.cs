@@ -50,6 +50,6 @@ namespace DataAccessLayer.IRepository
         /// <param name="idList"></param>
         /// <returns></returns>
         void RemoveRange(IEnumerable<T> entity);
-        bool SaveChanges();
+        
     }
 }

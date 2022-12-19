@@ -5,7 +5,12 @@
       "ProjectGuid": "6e9f4d13-368b-4499-a004-5f8e6c20cf32",
       "DisplayName": "DataAccessLayer",
       "ColorIndex": 0
+    },
+    "95621f49-270b-4421-9fcf-41a19a797f5a": {
+      "ProjectGuid": "95621f49-270b-4421-9fcf-41a19a797f5a",
+      "DisplayName": "DataLayer",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
