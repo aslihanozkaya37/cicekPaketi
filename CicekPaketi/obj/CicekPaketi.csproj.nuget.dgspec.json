@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\githubProject\\cicekPaketi\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\githubProject\\cicekPaketi\\DataAccessLayer\\DataAccessLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -95,9 +99,6 @@
               "C:\\githubProject\\cicekPaketi\\BusinessLayer\\BusinessLayer.csproj": {
                 "projectPath": "C:\\githubProject\\cicekPaketi\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "C:\\githubProject\\cicekPaketi\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\githubProject\\cicekPaketi\\DataAccessLayer\\DataAccessLayer.csproj"
-              },
               "C:\\githubProject\\cicekPaketi\\DataLayer\\DataLayer.csproj": {
                 "projectPath": "C:\\githubProject\\cicekPaketi\\DataLayer\\DataLayer.csproj"
               }
@@ -123,6 +124,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
             }
           },
           "imports": [

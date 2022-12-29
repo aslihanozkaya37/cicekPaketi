@@ -10,7 +10,17 @@
       "ProjectGuid": "95621f49-270b-4421-9fcf-41a19a797f5a",
       "DisplayName": "DataLayer",
       "ColorIndex": 1
+    },
+    "df9db7b3-d23c-41c9-a464-6c83217af49d": {
+      "ProjectGuid": "df9db7b3-d23c-41c9-a464-6c83217af49d",
+      "DisplayName": "CicekPaketi",
+      "ColorIndex": 2
+    },
+    "5dac3775-e730-476f-81ca-7a619934ff3c": {
+      "ProjectGuid": "5dac3775-e730-476f-81ca-7a619934ff3c",
+      "DisplayName": "BusinessLayer",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }
