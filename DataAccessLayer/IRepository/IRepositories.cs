@@ -19,7 +19,7 @@ namespace DataAccessLayer.IRepository
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        bool Add(T entity);
+       void Add(T entity);
         /// <summary>
         /// Filtreleme yaparak geri tek bir kayıt döndürür.
         /// </summary>
@@ -37,18 +37,19 @@ namespace DataAccessLayer.IRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        bool Delete(int id);
+        void Delete(int id);
         /// <summary>
         /// Gelen kaydı veritabanında günceller
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        bool Update(T entity);
+        void Update(T entity);
         /// <summary>
         /// Id si verilen kayıtları çoklu siler.
         /// </summary>
         /// <param name="idList"></param>
         /// <returns></returns>
-        bool RemoveRange(List<int> idList);
+        void RemoveRange(IEnumerable<T> entity);
+        
     }
 }

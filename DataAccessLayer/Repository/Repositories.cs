@@ -1,4 +1,6 @@
 ﻿using DataAccessLayer.IRepository;
+using DataLayer.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,39 +12,51 @@ namespace DataAccessLayer.Repository
 {
     public class Repositories<T> : IRepositories<T> where T : class
     {
-        public bool Add(T entity)
+        private readonly CicekPaketiDbContext cicekPaketiDbContext;
+
+        private DbSet<T> dbSet;
+
+        public Repositories(CicekPaketiDbContext db)
         {
-            throw new NotImplementedException();
+            this.cicekPaketiDbContext=db;
+            this.dbSet = cicekPaketiDbContext.Set<T>();
+        }
+        public void Add(T entity)
+        {
+            dbSet.Add(entity);
         }
 
-        public bool Delete(int id)
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            dbSet.Remove(dbSet.Find(id));
         }
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return dbSet;
         }
 
         public IEnumerable<T> GetFilteredList(Expression<Func<T, bool>> filter)
         {
-            throw new NotImplementedException();
+            return dbSet.Where(filter);
+            
         }
 
         public T GetFirstOrDefault(Expression<Func<T, bool>> filter)
         {
-            throw new NotImplementedException();
+            return dbSet.Where(filter).FirstOrDefault();
         }
 
-        public bool RemoveRange(List<int> idList)
+        public void RemoveRange(IEnumerable<T> entityList)
         {
-            throw new NotImplementedException();
+            dbSet.RemoveRange(entityList);
         }
 
-        public bool Update(T entity)
+
+        public void Update(T entity)
         {
-            throw new NotImplementedException();
+            dbSet.Update(entity);
         }
+
     }
 }

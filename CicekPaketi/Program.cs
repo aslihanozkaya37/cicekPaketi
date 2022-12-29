@@ -1,3 +1,7 @@
+using BusinessLayer.IServices;
+using BusinessLayer.Services;
+using DataAccessLayer.IRepository;
+using DataAccessLayer.Repository;
 using DataLayer.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +11,12 @@ builder.Services.AddDbContext<CicekPaketiDbContext>(options => options.UseSqlSer
     ));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IUserServices, UserServices>();
+builder.Services.AddScoped<IProductServices, ProductServices>();
+builder.Services.AddScoped<IUserServices, UserServices>();
 
 var app = builder.Build();
 
