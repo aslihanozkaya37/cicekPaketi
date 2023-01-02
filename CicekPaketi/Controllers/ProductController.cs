@@ -25,5 +25,35 @@ namespace CicekPaketi.Controllers
             else
                 return View(productVm);
         }
+
+        public IActionResult ProductList()
+        {
+
+            return View(productServices.GetProducts());
+        }
+
+        public IActionResult Delete(int id)
+        {
+            if(productServices.removeproduct(id))
+            {
+                return RedirectToAction("ProductList");
+            }
+
+            return RedirectToAction("ProductList");
+        }
+
+        public IActionResult Update(int id)
+        {
+            return View(productServices.GetProduct(id));
+        }
+        [HttpPost]
+        public IActionResult Update(ProductVM model)
+        {
+           if(productServices.Update(model))
+            {
+                return RedirectToAction("ProductList");
+            }
+            return RedirectToAction("ProductList");
+        }
     }
 }

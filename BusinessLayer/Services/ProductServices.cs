@@ -30,5 +30,61 @@ namespace BusinessLayer.Services
             unitOfWork.ProductRepository.Add(p);
             return unitOfWork.SaveChanges();
         }
+
+        public ProductVM GetProduct(int id)
+        {
+            Product p = unitOfWork.ProductRepository.GetFirstOrDefault(x => x.id == id);
+            ProductVM model = new ProductVM();
+            model.ProductName = p.ProductName;
+            model.Image1 = p.Image1;
+            model.Image2 = p.Image2;
+            model.Image3 = p.Image3;
+            model.Price = p.Price;
+            model.Quantity = p.Quantity;
+            model.Id = p.id;
+            return model;
+        }
+
+        public IEnumerable<ProductVM> GetProducts()
+        {
+            List<ProductVM> products = new List<ProductVM>();
+            foreach (Product model in unitOfWork.ProductRepository.GetAll())
+            {
+                ProductVM product = new ProductVM();
+                product.Id = model.id;
+                product.ProductName = model.ProductName;
+                product.Image1 = model.Image1;
+                product.Image2 = model.Image2;
+                product.Image3 = model.Image3;
+                product.Price = model.Price;
+                product.Quantity = model.Quantity;
+               
+                products.Add(product);
+            }
+            
+            return products;
+        }
+
+        public bool removeproduct(int id)
+        {
+            unitOfWork.ProductRepository.Delete(id);
+            return unitOfWork.SaveChanges();
+        }
+
+        public bool Update(ProductVM productVM)
+        {
+            Product product = new Product();
+            product.ProductName = productVM.ProductName;
+            product.id = productVM.Id;
+            product.Image1 = productVM.Image1;
+            product.Image2=productVM.Image2;
+            product.Image3=productVM.Image3;
+            product.Price=productVM.Price;
+            product.Quantity=productVM.Quantity;
+            unitOfWork.ProductRepository.Update(product);
+            return unitOfWork.SaveChanges();
+
+
+        }
     }
 }
